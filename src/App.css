@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 :root {
-  --primaryColor: #f15025;
+  --primaryColor: #dc3545;
   --mainWhite: #fff;
   --mainBlack: #222;
   --mainGrey: #9e9e9e;
-  --mainRed: #d50000;
+  --mainRed: #dc3545;
   --mainGreen: #4caf50;
 }
 * {
@@ -12,7 +12,18 @@
   box-sizing: border-box;
 }
 body {
-  background: var(--mainGrey);
+  background: #085078; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #85d8ce,
+    #085078
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #85d8ce,
+    #085078
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: var(--mainBlack);
   font-family: "Roboto", sans-serif;
 }
@@ -114,6 +125,7 @@ label {
   flex: 0 0 60%;
   display: flex;
   justify-content: space-between;
+  font-weight: 500;
 }
 .expense {
   margin-right: 2rem;
@@ -144,7 +156,7 @@ label {
 .total {
   font-weight: 300;
   color: var(--mainWhite);
-  background-color: var(--primaryColor);
+  background-color: #868e96;
   border-radius: 2px;
   padding: 2px 5px;
 }
